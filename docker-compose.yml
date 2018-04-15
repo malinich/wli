@@ -19,7 +19,7 @@ services:
 
   wli_router:
     build:
-      context: wli_router/.
+      context: wli_routers/.
       dockerfile: Dockerfile
     volumes:
       - ./wli_router:/app
