@@ -4,3 +4,12 @@
 [submodule "wli_routers"]
 	path = wli_routers
 	url = https://github.com/malinich/wli_routers.git
+[submodule "wli_images"]
+	path = wli_images
+	url = https://github.com/malinich/wli_images.git
+[submodule "wli_cities"]
+	path = wli_cities
+	url = https://github.com/malinich/wli_cities.git
+[submodule "wli_blog"]
+	path = wli_blog
+	url = https://github.com/malinich/wli_blog.git
