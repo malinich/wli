@@ -1,0 +1,6 @@
+[submodule "wli_users"]
+	path = wli_users
+	url = https://github.com/malinich/wli_users.git
+[submodule "wli_routers"]
+	path = wli_routers
+	url = https://github.com/malinich/wli_routers.git

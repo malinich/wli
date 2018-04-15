@@ -1,0 +1,55 @@
+version: "3"
+volumes:
+  wli_data: {}
+
+services:
+  wli_image:
+    image: "wli-image"
+    container_name: "wli_image"
+    environment:
+      - CONSUL_HOST=127.0.0.1
+    expose:
+      - 3000
+    ports:
+      - 3001:3000
+    network_mode: "host"
+
+  wli_home:
+    image: alpine:latest
+
+  wli_router:
+    build:
+      context: wli_router/.
+      dockerfile: Dockerfile
+    volumes:
+      - ./wli_router:/app
+    ports:
+      - 3004:3004
+    depends_on:
+      - wli_mongo
+      - wli_users
+
+  wli_users:
+    build:
+      context: wli_users/.
+      dockerfile: Dockerfile
+    volumes:
+      - ./wli_users:/app
+    ports:
+      - 3005:3005
+    depends_on:
+      - wli_mongo
+
+  wli_mongo:
+    image: mongo:latest
+    container_name: wli_mongo
+    ports:
+      - 27017:27017
+
+  wli_nginx:
+    image: nginx:mainline
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - wli_data:/etc/nginx/logs
+    ports:
+      - 8000:80
