@@ -1,0 +1,44 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aioconsole = "==0.1.7"
+aiohttp = "==3.1.2"
+"asn1crypto" = "==0.24.0"
+attrs = "==17.4.0"
+cachetools = "==2.0.1"
+certifi = "==2017.11.5"
+cffi = "==1.11.5"
+chardet = "==3.0.4"
+click = "==6.7"
+cloudinary = "==1.10.0"
+cryptography = "==2.2.2"
+idna = "==2.6"
+itsdangerous = "==0.24"
+marshmallow = "==2.15.0"
+mock = "==2.0.0"
+motor = "==1.2.0"
+multidict = "==4.1.0"
+pbr = "==3.1.1"
+pycparser = "==2.18"
+pymongo = "==3.6.0"
+python-consul = "==0.7.2"
+python-dateutil = "==2.6.1"
+requests = "==2.18.4"
+six = "==1.11.0"
+tornado = "==4.5.3"
+umongo = "==0.15.0"
+"urllib3" = "==1.22"
+yarl = "==1.1.1"
+async_timeout = "==2.0.1"
+idna_ssl = "==1.0.1"
+MarkupSafe = "==1.0"
+PyJWT = "==1.6.1"
+Werkzeug = "==0.14.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
