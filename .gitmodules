@@ -13,3 +13,6 @@
 [submodule "wli_blog"]
 	path = wli_blog
 	url = https://github.com/malinich/wli_blog.git
+[submodule "wli_front"]
+	path = wli_front
+	url = https://github.com/malinich/wli_front.git
